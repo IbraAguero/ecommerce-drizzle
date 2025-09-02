@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShoppingCart, UserCircle } from "lucide-react";
+import { UserCircle } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,6 +10,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import MenuSide from "./menu-side";
+import Cart from "../cart/cart";
 
 const ROUTES = [
   { link: "/camperas", label: "Camperas" },
@@ -28,9 +29,7 @@ function Navbar() {
             </h1>
           </Link>
           <div className="flex items-center gap-5">
-            <div>
-              <ShoppingCart />
-            </div>
+            <Cart />
             <Link
               href={"/cuenta"}
               role="button"
